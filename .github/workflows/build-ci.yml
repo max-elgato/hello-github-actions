@@ -1,0 +1,12 @@
+name: Bump version
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo tag
+        run: echo $GITHUB_REF
